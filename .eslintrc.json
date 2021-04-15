@@ -1,0 +1,62 @@
+{
+    "env": {
+      "es2021": true,
+      "node": true,
+      "jest": true
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "eslint-plugin-import-helpers",
+       "@typescript-eslint"
+    ],
+    "rules": {
+      "global-require": ["off"],
+      "import/prefer-default-export": ["off"],
+      "linebreak-style": ["error", "unix"],
+      "max-len": ["error", 100, 2, {
+        "ignoreUrls": true,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }],
+      "no-confusing-arrow": ["off"],
+      "no-nested-ternary": ["warn"],
+      "no-return-assign": ["off"],
+      "no-restricted-syntax": ["warn"],
+      "no-underscore-dangle": ["off"],
+      "no-unused-expressions": [
+        "error",
+        {
+         "allowShortCircuit": true,
+         "allowTernary": true,
+         "allowTaggedTemplates": false
+        }
+      ],
+      "no-use-before-define": [
+        "error",
+        {
+          "variables": false,
+          "classes": true,
+          "functions": false
+        }
+      ],
+      "no-useless-escape": ["off"],
+      "react/prop-types": ["off"],
+      "quotes": ["error", "single"],
+      "semi": ["error", "never"]
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    }
+}
