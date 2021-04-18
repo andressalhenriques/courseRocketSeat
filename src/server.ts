@@ -1,12 +1,12 @@
-import express, { request, response } from 'express'
-import { categoriesRoutes } from './routes/Categories.routes'
-import { specificationRoutes } from './routes/specification.routes'
+import express from 'express'
+const swaggerUi = require('swagger-ui-express')
+
+import { router } from './routes'
+import swaggerFile from './swagger.json'
 
 const app = express()
 app.use(express.json())
-
-app.use("/categories", categoriesRoutes)
-app.use("/specification", specificationRoutes)
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+app.use(router)
 
 app.listen(3001, () => console.log("Server is running"))
