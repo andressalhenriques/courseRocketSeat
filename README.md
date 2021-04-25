@@ -102,6 +102,7 @@ yarn add -D eslint-plugin-import-helpers eslint-import-resolver-typescript
 ```
 
 <h3>Create file .eslintignore on root directory and add</h3>
+
 ```json
 .js
 node_modules
