@@ -21,7 +21,7 @@
 - [x] List all categories
 - [x] Create car specification
 - [x] List all specifications
-- [ ] Save data on postgree
+- [x] Save data on postgree
 - [ ] Add user avatar
 - [ ] Testing
 - [ ] Returning car
